@@ -13,3 +13,14 @@ const wordPattern = (word) => {
   }
   return output.join(".");
 };
+
+// solution with map.has()
+
+const wordPatternHas = (word, d = new Map()) => {
+  return [...word.toLowerCase()]
+    .map((c) => {
+      if (!d.has(c)) d.set(c, d.size);
+      return d.get(c);
+    })
+    .join(".");
+};
