@@ -5,7 +5,7 @@ const solution = (list) => {
   for (i = 0; i < len; i = j + 1) {
     out.push(list[i]);
 
-    for (var j = i + 1; j < len && list[j] == list[j - 1] + 1; j++);
+    for (let j = i + 1; j < len && list[j] == list[j - 1] + 1; j++);
     j--;
 
     if (i == j) {
