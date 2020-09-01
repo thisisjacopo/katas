@@ -8,3 +8,7 @@ const disemvowel = (str) => {
 
   return newString;
 };
+
+//Solution with Regex;
+
+disemvowel = (str) => str.replace(/[aeiou]/gi, "");
